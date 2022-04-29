@@ -21,6 +21,15 @@ Genetic Algorithm adapted for Vehicle Routing Problems, based on PariseC code
 
 The values can be change, but we need to make sure is something viable.
 If we increase the load, then we need to modify hyperparameter v_cap
+
+To run the optimization problem:
+Run "main.py"
+Install:
+- numpy
+- pandas
+- xlsxwriter
+- matplotlib
+- openpyxl
  
 
 # Differences
