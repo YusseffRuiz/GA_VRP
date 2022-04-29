@@ -2,15 +2,15 @@
 Genetic Algorithm adapted for Vehicle Routing Problems, based on PariseC code
 
 # Parameters
- :param filepath:Xlsx file path
- :param outputFile: Xlsx output file path for results, giving optimized values and the order for the destinations
- :param epochs:Number of Iterations
- :param pc:Crossover probability
- :param pm:Mutation probability
- :param popsize:Population size
- :param n_select:Number of excellent individuals selected
- :param v_cap:Vehicle capacity, how much every vechicle can carry
- :param opt_type:Optimization type:
+ - :param filepath:Xlsx file path
+ - :param outputFile: Xlsx output file path for results, giving optimized values and the order for the destinations
+ - :param epochs:Number of Iterations
+ - :param pc:Crossover probability
+ - :param pm:Mutation probability
+ - :param popsize:Population size
+ - :param n_select:Number of excellent individuals selected
+ - :param v_cap:Vehicle capacity, how much every vechicle can carry
+ - :param opt_type:Optimization type:
       - 0:Minimize the number of vehicles,1:Minimize travel distance
       
  In the Excel File:
