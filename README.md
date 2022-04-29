@@ -23,7 +23,7 @@ The values can be change, but we need to make sure is something viable.
 If we increase the load, then we need to modify hyperparameter v_cap
  
 
-**# Differences
+# Differences
 The differentes done in this repository are commented blocks about what is done in each place.
 A little bit of optimization in some functions:
   - calFit: Modified to store the values of vehicles and distance traveled, independentely of what we are looking to minimize
