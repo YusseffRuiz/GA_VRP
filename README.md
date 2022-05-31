@@ -1,19 +1,10 @@
-# GA_VRP
-Genetic Algorithm adapted for Vehicle Routing Problems, based on PariseC code
+# VRP Solutions
 
-# Parameters
- - :param filepath:Xlsx file path
- - :param outputFile: Xlsx output file path for results, giving optimized values and the order for the destinations
- - :param epochs:Number of Iterations
- - :param pc:Crossover probability
- - :param pm:Mutation probability
- - :param popsize:Population size
- - :param n_select:Number of excellent individuals selected
- - :param v_cap:Vehicle capacity, how much every vechicle can carry
- - :param opt_type:Optimization type:
-      - 0:Minimize the number of vehicles,1:Minimize travel distance
-      
- In the Excel File:
+On the main File we will find two options, if we choose option 0, the VRP will be solved via Genetic Algorithms, option 1 = Ant Colony Optimization.
+Both algorithms based on PariseC code
+
+## Requirements
+In the Excel File:
  - id: the number of location to be visited by the store
  - id = 0 : The depot location
  - x and y coordinates: coordinates of each location, will be used to calculate distance
@@ -30,6 +21,20 @@ Install:
 - xlsxwriter
 - matplotlib
 - openpyxl
+
+# GA
+
+# Parameters
+ - :param filepath:Xlsx file path
+ - :param outputFile: Xlsx output file path for results, giving optimized values and the order for the destinations
+ - :param epochs:Number of Iterations
+ - :param pc:Crossover probability
+ - :param pm:Mutation probability
+ - :param popsize:Population size
+ - :param n_select:Number of excellent individuals selected
+ - :param v_cap:Vehicle capacity, how much every vechicle can carry
+ - :param opt_type:Optimization type:
+      - 0:Minimize the number of vehicles,1:Minimize travel distance
  
 
 # Differences
@@ -41,4 +46,15 @@ The distribution was made in different classes for optimization and simplier use
 Results are also written in a separate file and location can be selected from main
 
 
+
+## ACO
+parameters filepath:Xlsx file path
+- :param Q:Total pheromone or TAU
+- :param alpha:Information heuristic factor
+- :param beta:Expected heuristic factor
+- :param rho:Information volatilization factor, decay value between 0 to 1
+- :param epochs:Iterations
+- :param v_cap: Vehicle capacity
+- :param opt_type:Optimization type:0:Minimize the number of vehicles,1:Minimize travel distance
+- :param popsize:Population size
 
