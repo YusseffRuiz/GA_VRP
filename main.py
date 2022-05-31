@@ -39,22 +39,16 @@ if __name__ == '__main__':
     outFile = './Files/result.xlsx'
     ga_algorithm = GA_VRP.GA_VRP()
     aco_algorithm = ACO_VRP.ACO_VRP()
+    selection = 0
+    ## 0 for GA, 1 for ACO
 
-    """
-    
-    GA Algorithm
-                            :param filepath:Xlsx file path
-                            :param epochs:Number of Iterations
-                            :param pc:Crossover probability
-                            :param pm:Mutation probability
-                            :param popsize:Population size
-                            :param n_select:Number of excellent individuals selected
-                            :param v_cap:Vehicle capacity, how much every vechicle can carry
-                            :param opt_type:Optimization type:0:Minimize the number of vehicles,1:Minimize travel distance
-                            :return:
-                            """
-    #ga_algorithm.ga_main(file,50,0.8,0.2,100,50,80,1, outFile)
-
-    aco_algorithm.run(filepath=file, Q=10, alpha=1, beta=5, rho=0.1, epochs=100, v_cap=60, opt_type=1, popsize=60, outFilepath=outFile)
+    if selection == 0:
+        ga_algorithm.ga_main(filepath=file, epochs=50, pc=0.8, pm=0.2, popsize=100, n_select=50, v_cap=80, opt_type=1,
+                             outFile=outFile)
+        print("Finished with GA")
+    else:
+        aco_algorithm.run(filepath=file, Q=10, alpha=1, beta=5, rho=0.1, epochs=100, v_cap=60, opt_type=1, popsize=60,
+                          outFilepath=outFile)
+        print("Finished with ACO")
 
 # See PyCharm help at https://www.jetbrains.com/help/pycharm/
